@@ -6,7 +6,7 @@
   "name": ".NET core service template",
   "identity": "dotnetCoreServiceTemplate.CSharp",
   "groupIdentity":"dotnetCoreServiceTemplates",
-  "shortName": "serviceTemplate",
+  "shortName": "dotnetProjectTemplate",
   "tags": {
     "language": "C#",
     "type": "solution"

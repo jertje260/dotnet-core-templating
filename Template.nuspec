@@ -2,16 +2,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>jertje260.Core.Project.Template</id>
-        <version>0.1.0</version>
+        <version>0.1.1</version>
         <description>This template generates a solution with multiple projects for .net core including Api</description>
         <authors>Jeroen Broekhuizen</authors>
         <language>en-UK</language>
         <projectUrl>https://github.com/jertje260/dotnet-core-templating</projectUrl>
+        <license type="file">LICENSE.txt</license>
         <packageTypes>
             <packageType name="Template" />
         </packageTypes>
     </metadata>
     <files>
         <file src=".\Content\**" target="Content" exclude="**\bin\**;**\obj\**"/>
+        <file src=".\LICENSE.txt"/>
+        <file src=".\readme.md"/>
     </files>
 </package>
