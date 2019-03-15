@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Configuration", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Services", "Template.Services\Template.Services.csproj", "{FE7B123D-D941-4BEB-BDBD-63719C003A70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Tests", "Template.Tests\Template.Tests.csproj", "{0BC64A7B-7726-45A8-804E-974223AF9CA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Tests", "Template.Tests\Template.Tests.csproj", "{0BC64A7B-7726-45A8-804E-974223AF9CA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
