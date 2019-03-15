@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>jertje260.Core.Project.Template</id>
+        <version>0.1.0</version>
+        <description>This template generates a solution with multiple projects for .net core including Api</description>
+        <authors>Jeroen Broekhuizen</authors>
+        <language>en-UK</language>
+        <projectUrl>https://github.com/jertje260/dotnet-core-templating</projectUrl>
+        <packageTypes>
+            <packageType name="Template" />
+        </packageTypes>
+    </metadata>
+    <files>
+        <file src=".\Content\**" target="Content" exclude="**\bin\**;**\obj\**"/>
+    </files>
+</package>
