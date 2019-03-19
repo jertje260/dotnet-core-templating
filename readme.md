@@ -15,3 +15,7 @@ and then the template can be created with:
 ```
 dotnet new dotnetProjectTemplate --name MyProject --output MyProject
 ```
+
+## Find more templates
+
+More templates from nuget can be found [here](https://dotnetnew.azurewebsites.net/).
