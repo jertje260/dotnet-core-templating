@@ -2,7 +2,8 @@
 using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
+using Serilog;
+
 
 namespace Template.Api.Middlewares
 {
@@ -25,7 +26,7 @@ namespace Template.Api.Middlewares
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Unhandled exception: {Message}", ex.Message);
+                _logger.Error(ex, "Unhandled exception: {Message}", ex.Message);
 
                 httpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
