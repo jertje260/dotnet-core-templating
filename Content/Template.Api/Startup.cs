@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
-//using Swashbuckle.AspNetCore.Swagger;
+using Swashbuckle.AspNetCore.Swagger;
 using Template.Api.Middlewares;
 using Template.Api.Middlewares.BasicAuthentication;
 
@@ -33,49 +33,49 @@ namespace Template.Api
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            //services.AddSwaggerGen(c =>
-            //{
-            //    c.SwaggerDoc(
-            //        "v1",
-            //        new Info
-            //        {
-            //            Title = "API",
-            //            Version = "v1"
-            //        }
-            //    );
-            //    c.AddSecurityDefinition(
-            //        "Basic",
-            //        new ApiKeyScheme
-            //        {
-            //            In = "header",
-            //            Description = "Please enter token with \"Basic\" into field",
-            //            Name = "Authorization",
-            //            Type = "apiKey"
-            //        }
-            //    );
-            //    c.AddSecurityRequirement(
-            //        new Dictionary<string, IEnumerable<string>>
-            //        {
-            //            {
-            //                "Basic",
-            //                Enumerable.Empty<string>()
-            //            }
-            //        }
-            //    );
-            //});
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc(
+                    "v1",
+                    new Info
+                    {
+                        Title = "API",
+                        Version = "v1"
+                    }
+                );
+                c.AddSecurityDefinition(
+                    "Basic",
+                    new ApiKeyScheme
+                    {
+                        In = "header",
+                        Description = "Please enter token with \"Basic\" into field",
+                        Name = "Authorization",
+                        Type = "apiKey"
+                    }
+                );
+                c.AddSecurityRequirement(
+                    new Dictionary<string, IEnumerable<string>>
+                    {
+                        {
+                            "Basic",
+                            Enumerable.Empty<string>()
+                        }
+                    }
+                );
+            });
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            //app.UseSwagger();
-            //app.UseSwaggerUI(
-            //    c =>
-            //    {
-            //        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Service");
-            //    }
-            //);
+            app.UseSwagger();
+            app.UseSwaggerUI(
+                c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Service");
+                }
+            );
 
             if (env.IsDevelopment())
             {
