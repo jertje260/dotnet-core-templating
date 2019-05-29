@@ -18,6 +18,39 @@
       "datatype": "bool",
       "description": "If specified, skips the automatic restore of the project on create",
       "defaultValue": "false"
+    },
+    "framework": {
+      "type": "parameter",
+      "description": "The target framework for the project.",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "netcoreapp1.0",
+          "description": "Target netcoreapp1.0"
+        },
+        {
+          "choice": "netcoreapp1.1",
+          "description": "Target netcoreapp1.1"
+        },
+        {
+          "choice": "netcoreapp2.0",
+          "description": "Target netcoreapp2.0"
+        },
+        {
+          "choice": "netcoreapp2.1",
+          "description": "Target netcoreapp2.1"
+        },
+        {
+          "choice": "netcoreapp2.2",
+          "description": "Target netcoreapp2.2"
+        },
+        {
+          "choice": "netcoreapp3.0",
+          "description": "Target netcoreapp3.0"
+        }
+      ],
+      "replaces": "netcoreapp2.1",
+      "defaultValue": "netcoreapp2.1"
     }
   },
   "postActions": [
