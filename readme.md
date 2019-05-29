@@ -8,13 +8,16 @@ The package can be installed with:
 ```
 dotnet new -i jertje260.Core.Project.Template
 ```
-if you have multiple nuget sources, use: `--nuget-source https://api.nuget.org/v3/index.json` behind it.
+If you have multiple nuget sources, use: `--nuget-source https://api.nuget.org/v3/index.json` behind it.
 
 
 and then the template can be created with:
 ```
 dotnet new dotnetProjectTemplate --name MyProject --output MyProject
 ```
+
+It also has a `--framework` parameter to override the default framework.
+Check `dotnet new dotnetProjectTemplate --help` for more info.
 
 ## Find more templates
 
